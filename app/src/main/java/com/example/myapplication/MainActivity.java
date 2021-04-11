@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CpuUsageInfo;
+import android.view.View;
 
 import java.util.Vector;
 
@@ -24,5 +26,11 @@ public class MainActivity extends AppCompatActivity {
         r.setLayoutManager( new LinearLayoutManager(this));
         r.setAdapter(new CustomAdaptor(data));
 
+    }
+
+    public void onClick(View view) {
+        Intent i = new Intent(this, new_screen.class);
+        i.putExtra("message","FUCK OFF");
+        startActivity(i);
     }
 }
